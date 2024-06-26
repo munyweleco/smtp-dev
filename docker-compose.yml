@@ -72,5 +72,5 @@ services:
 
 networks:
   default:
-    name: sfa
+    name: web
     external: true
