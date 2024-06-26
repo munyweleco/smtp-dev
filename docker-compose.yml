@@ -70,7 +70,7 @@ services:
 # volumes:
 #   smtp4dev-data:
 
-networks:
-  default:
-    name: web
-    external: true
+# networks:
+#   default:
+#     name: web
+#     external: true
