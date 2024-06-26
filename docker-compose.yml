@@ -11,9 +11,9 @@ services:
       - '8025:25'
       # Change the number before : to the port the IMAP server should be accessible on
       - '8443:143'
-    # volumes:
-    #   # This is where smtp4dev stores the database..
-    #     - smtp4dev-data:/smtp4dev
+    volumes:
+      # This is where smtp4dev stores the database..
+        - smtp4dev-data:/smtp4dev
     environment:
       # Uncomment to customise these settings
       # This is not a complete list of the available settings.
@@ -67,5 +67,5 @@ services:
       #Specifies the port the IMAP server will listen on - allows standard email clients to view/retrieve messages
       #"ServerOptions__ImapPort"=143
 
-# volumes:
-#   smtp4dev-data:
+volumes:
+  smtp4dev-data:
