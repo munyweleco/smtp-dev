@@ -2,6 +2,7 @@ version: '3'
 
 services:
   smtp4dev:
+    container_name: smtp4dev
     image: rnwood/smtp4dev:v3
     restart: always
     ports:
