@@ -1,7 +1,7 @@
+version: '3'
+
 services:
   smtp4dev:
-    hostname: smtp4dev
-    container_name: smtp4dev
     image: rnwood/smtp4dev:v3
     restart: always
     ports:
@@ -12,9 +12,9 @@ services:
       # Change the number before : to the port the IMAP server should be accessible on
       - '143:143'
     # volumes:
-      # This is where smtp4dev stores the database..
-        # - smtp4dev-data:/smtp4dev
-    # environment:
+    #   # This is where smtp4dev stores the database..
+    #     - smtp4dev-data:/smtp4dev
+    environment:
       # Uncomment to customise these settings
       # This is not a complete list of the available settings.
       # See the documentation in appsettings.json for a full list.
@@ -23,10 +23,10 @@ services:
       #- ServerOptions__BasePath=/smtp4dev
 
       #Specifies the URLs the web UI will use inside the container.
-      # - ServerOptions__Urls=http://*:80
+      - ServerOptions__Urls=http://*:80
 
       #Specifies the server hostname. Used in auto-generated TLS certificate if enabled.
-      # - ServerOptions__HostName=smtp4dev
+      - ServerOptions__HostName=smtp4dev
 
       #Locks settings from being changed by user via web interface
       #- ServerOptions__LockSettings=true
@@ -69,8 +69,3 @@ services:
 
 # volumes:
 #   smtp4dev-data:
-
-# networks:
-#   default:
-#     name: web
-#     external: true
